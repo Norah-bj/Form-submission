@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Ice Cream Order Form</h1>
+        <form id="iceCreamForm" action="./index.php" method="post">
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="name">Name:</label><br>
+                <input type="name" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"placeholder="Enter your email" required><br><br>
+
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number " required><br><br>
+
+                <label for="date">Date:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+            </fieldset>
+
+           
+            <fieldset>
+                <legend>Select Your Ice Cream Flavor</legend>
+                <label for="flavor">Choose your flavor:</label>
+                <input type="text" name="flavor" id="flavor" list="flavors" placeholder="Choose or type your favorite flavor">
+                <datalist id="flavors" name="flavors" required>
+                    <option value="Pink - Strawberry"></option>
+                    <option value="Chocolate"></option>
+                    <option value="Yellow - Vanilla"></option>
+                </datalist><br><br>
+
+                <label for="color">Select Ice Cream Color:</label>
+                <input type="color" id="color" name="color" value="#FFC0CB" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mode of Payment</legend>
+                <label for="payment">Choose your payment method:</label>
+                <select id="payment" name="payment" required>
+                    <optgroup label="Online Payment">
+                        <option value="creditCard">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="netBanking">Net Banking</option>
+                    </optgroup>
+                    <optgroup label="Offline Payment">
+                        <option value="cashOnDelivery">Cash on Delivery</option>
+                        <option value="bankTransfer">Bank Transfer</option>
+                    </optgroup>
+                </select><br><br>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </fieldset>
+
+    
+            <fieldset>
+                <legend>Customize Your Ice Cream</legend>
+                <label for="topping">Choose Your Topping:</label>
+                <select id="topping" name="topping">
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="chocolateSyrup">Chocolate Syrup</option>
+                    <option value="nuts">Nuts</option>
+                    <option value="candies">candies</option>
+                </select><br><br>
+    
+                <label for="size">Ice Cream Size:</label>
+                <input type="range" id="size" name="size" min="2" max="10" value="10" class="range" oninput="outputSize.value=size.value">
+                <output id="outputSize" name="outputSize">10</output>
+                <br><br>
+                
+        
+                <label for="agree"><strong>Argument</strong><br>
+                    <input type="checkbox" id="agree" name="agree" value="agree" required>
+                    I agree to the terms and conditions. <br><br><br>
+                
+                <label for="deriverance" style="font-size: 1em;"><strong>Deriverance</strong></label><br>
+                    <input type="radio" name="deriver" value="Home derivery" required>
+                    <label for="deriver" style="font-size: 0.9em;">Home derivery</label> <br>
+                    <input type="radio" name="deriver" value="In contact" required>
+                    <label for="deriver" style="font-size: 0.9em;">In contact</label><br><br>
+                
+
+                <label for="message" style="font-size: 1em;"><strong>Additional Notes:</strong></label><br>
+                <textarea id="message" name="message" ></textarea><br><br><br>
+        
+                <button type="submit">Place Order</button>
+            </fieldset>
+            
+        </form>
+    </div>
+</body>
+</html>
